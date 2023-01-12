@@ -31,6 +31,7 @@ public class CurrencyConversionController {
 		uriVariables.put("to",to);
 		logger.info("this is a info message");
 		logger.info("log for Pipeline Create Test");
+		fail //commit
 		ResponseEntity<CurrencyConversion> responseEntity = new RestTemplate().getForEntity
 		("http://localhost:8000/currency-exchange/from/{from}/to/{to}", 
 				CurrencyConversion.class, uriVariables);
